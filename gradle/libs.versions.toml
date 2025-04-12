@@ -1,0 +1,35 @@
+[versions]
+agp = "8.3.2"  # Latest stable AGP version as of May 2024
+kotlin = "1.9.22"
+junit = "4.13.2"
+junitVersion = "1.1.5"  # Updated to stable version
+espressoCore = "3.5.1"  # Updated to stable version
+appcompat = "1.6.1"
+material = "1.11.0"  # Updated to stable version
+activity = "1.8.2"  # Updated to stable version
+constraintlayout = "2.1.4"  # Updated to stable version
+sqlite = "2.4.0"  # Added for database support
+coreKtx = "1.12.0"
+playServicesLocation = "21.3.0"  # Added for Kotlin extensions
+
+[libraries]
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+# AndroidX
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+# Database
+sqlite = { group = "androidx.sqlite", name = "sqlite", version.ref = "sqlite" }
+sqlite-ktx = { group = "androidx.sqlite", name = "sqlite-ktx", version.ref = "sqlite" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+
+[plugins]
+android-application = { id = "com.android.application", version = "8.4.0" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
